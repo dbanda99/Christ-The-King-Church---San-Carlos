@@ -633,3 +633,53 @@ body{ overflow-x:hidden; }
     min-height: 380px;
   }
 }
+
+
+/* Mobile overflow + dropdown safety */
+html, body{
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+@media (max-width: 575.98px){
+  .navbar{
+    left: 0;
+    right: 0;
+  }
+  .dropdown-menu{
+    max-width: calc(100vw - 24px);
+    min-width: 200px;
+  }
+  .nav-controls{
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+
+
+/* Desktop navbar layout fixes (San Carlos) */
+@media (min-width: 992px){
+  .w-lg-auto{ width: auto !important; }
+  #siteNavbar .container{
+    flex-wrap: nowrap;
+  }
+  #siteNavbar .navbar-brand{
+    width: auto !important;
+    white-space: nowrap;
+  }
+  #siteNavbar .navbar-collapse{
+    flex-grow: 1;
+  }
+  #siteNavbar .navbar-nav{
+    flex-wrap: nowrap;
+    gap: .25rem;
+  }
+  #siteNavbar .navbar-nav .nav-link{
+    white-space: nowrap;
+  }
+  #siteNavbar .nav-controls{
+    width: auto !important;
+    flex: 0 0 auto;
+  }
+}
